@@ -34,6 +34,8 @@ def initprt():
     return 0
 
 
+initprt()
+
 while init > 0:
     initprt()
     'chamada da função'
@@ -107,6 +109,7 @@ while init > 0:
     a, b, c = 0, 0, 0
     d, e, f = 0, 1, 2
     i = 6
+    initprt()
     while i > 0:
 
         while i > 3:
@@ -139,6 +142,7 @@ while init > 0:
     init -= 1
     if draw == 0 and init == 0:
         print("ITS A DRAW")
+    draw = 0
     while init == 0:
         ans = input("Deseja jogar novemente?: [Y/N]")
         if ans == "y":
