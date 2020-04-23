@@ -24,11 +24,11 @@ def cls():
 def initprt():
     print("""
     T_I_C_T_A_C_T_O_E
-    _________
-    _|{}|{}|{}|_
-    _|{}|{}|{}|_
-    _|{}|{}|{}|_
-    -|-|-|-|-
+    _________        _________
+    _|{}|{}|{}|_        _|1|2|3|_
+    _|{}|{}|{}|_        _|4|5|6|_
+    _|{}|{}|{}|_        _|7|8|9|_
+    -|-|-|-|-        -|-|-|-|-
     """"".format(listss[0][0], listss[0][1], listss[0][2], listss[1][0], listss[1][1], listss[1][2], listss[2][0],
                  listss[2][1], listss[2][2]))
     return 0
@@ -74,7 +74,8 @@ while init > 0:
     valid = 0
     if init % 2 == 0:
         while valid == 0:
-            print("JOGADOR OOO")
+
+            '''print("JOGADOR OOO")
             print("selecione um numero válido para jogar:")
 
             select = input()
@@ -105,6 +106,172 @@ while init > 0:
             if select == "9" and listss[2][2] != "X" and listss[2][2] != "O":
                 valid = 1
                 listss[2][2] = "O"
+            '''
+            a, b, c = 0, 0, 0
+            d, e, f = 0, 1, 2
+            i = 6
+            while i > 0:
+
+                while i > 3:
+                    i -= 1
+                    if valid == 0 and listss[a][d] == listss[c][f] == "O" or\
+                            listss[a][d] == listss[b][e] == "O" or listss[c][f] == listss[b][e] == "O":
+                        if valid == 0 and listss[a][d] == " ":
+                            listss[a][d] = "O"
+                            valid = 1
+                        if valid == 0 and listss[b][e] == " ":
+                            listss[b][e] = "O"
+                            valid = 1
+                        if valid == 0 and listss[c][f] == " ":
+                            listss[c][f] = "O"
+                            valid = 1
+                    a, b, c = a + 1, b + 1, c + 1
+                d, e, f, = 0, 0, 0
+
+                while i > 0:
+                    a, b, c = 0, 1, 2
+                    i -= 1
+                    if valid == 0 and listss[a][d] == listss[c][f] == "O" or\
+                            listss[a][d] == listss[b][e] == "O" or listss[c][f] == listss[b][e] == "O":
+                        if valid == 0 and listss[a][d] == " ":
+                            listss[a][d] = "O"
+                            valid = 1
+                        if valid == 0 and listss[b][e] == " ":
+                            listss[b][e] = "O"
+                            valid = 1
+                        if valid == 0 and listss[c][f] == " ":
+                            listss[c][f] = "O"
+                            valid = 1
+                    d, e, f = d + 1, e + 1, f + 1
+
+            a, b, c = 0, 0, 0
+            d, e, f = 0, 1, 2
+            i = 6
+            while i > 0:
+
+                while i > 3:
+                    i -= 1
+                    if valid == 0 and listss[a][d] == listss[c][f] == "X" or \
+                            listss[a][d] == listss[b][e] == "X" or listss[c][f] == listss[b][e] == "X":
+                        if valid == 0 and listss[a][d] == " ":
+                            listss[a][d] = "O"
+                            valid = 1
+                        if valid == 0 and listss[b][e] == " ":
+                            listss[b][e] = "O"
+                            valid = 1
+                        if valid == 0 and listss[c][f] == " ":
+                            listss[c][f] = "O"
+                            valid = 1
+                    a, b, c = a + 1, b + 1, c + 1
+                d, e, f, = 0, 0, 0
+
+                while i > 0:
+                    a, b, c = 0, 1, 2
+                    i -= 1
+                    if valid == 0 and listss[a][d] == listss[c][f] == "O" or \
+                            listss[a][d] == listss[b][e] == "O" or listss[c][f] == listss[b][e] == "O":
+                        if valid == 0 and listss[a][d] == " ":
+                            listss[a][d] = "O"
+                            valid = 1
+                        if valid == 0 and listss[b][e] == " ":
+                            listss[b][e] = "O"
+                            valid = 1
+                        if valid == 0 and listss[c][f] == " ":
+                            listss[c][f] = "O"
+                            valid = 1
+                    d, e, f = d + 1, e + 1, f + 1
+
+            a, b, c = 0, 0, 0
+            d, e, f = 0, 1, 2
+            i = 6
+            while i > 0:
+
+                while i > 3:
+                    i -= 1
+                    if valid == 0 and listss[a][d] == listss[c][f] != " " or\
+                            listss[a][d] == listss[b][e] != " " or listss[c][f] == listss[b][e] != " ":
+                        if valid == 0 and listss[a][d] == " ":
+                            listss[a][d] = "O"
+                            valid = 1
+                        if valid == 0 and listss[b][e] == " ":
+                            listss[b][e] = "O"
+                            valid = 1
+                        if valid == 0 and listss[c][f] == " ":
+                            listss[c][f] = "O"
+                            valid = 1
+                    a, b, c = a + 1, b + 1, c + 1
+                d, e, f, = 0, 0, 0
+
+                while i > 0:
+                    a, b, c = 0, 1, 2
+                    i -= 1
+                    if valid == 0 and listss[a][d] == listss[c][f] != " " or\
+                            listss[a][d] == listss[b][e] != " " or listss[c][f] == listss[b][e] != " ":
+                        if valid == 0 and listss[a][d] == " ":
+                            listss[a][d] = "O"
+                            valid = 1
+                        if valid == 0 and listss[b][e] == " ":
+                            listss[b][e] = "O"
+                            valid = 1
+                        if valid == 0 and listss[c][f] == " ":
+                            listss[c][f] = "O"
+                            valid = 1
+                    d, e, f = d + 1, e + 1, f + 1
+
+            'Diagonal'
+
+            if valid == 0 and listss[0][0] == listss[1][1] != " " or\
+                    listss[0][0] == listss[2][2] != " " or listss[2][2] == listss[1][1] != " ":
+                if valid == 0 and listss[0][0] == " ":
+                    listss[0][0] = "O"
+                    valid = 1
+                if valid == 0 and listss[1][1] == " ":
+                    listss[1][1] = "O"
+                    valid = 1
+                if valid == 0 and listss[2][2] == " ":
+                    listss[2][2] = "O"
+                    valid = 1
+
+            if valid == 0 and listss[2][0] == listss[1][1] != " " or\
+                    listss[0][2] == listss[2][0] != " " or listss[0][2] == listss[1][1] != " ":
+                if valid == 0 and listss[2][0] == " ":
+                    listss[2][0] = "O"
+                    valid = 1
+                if valid == 0 and listss[1][1] == " ":
+                    listss[1][1] = "O"
+                    valid = 1
+                if valid == 0 and listss[0][2] == " ":
+                    listss[0][2] = "O"
+                    valid = 1
+
+            'centro e lateral'
+            if listss[1][1] == " " and valid == 0:
+                listss[1][1] = "O"
+                valid = 1
+            elif valid == 0 and listss[0][0] == " " and (listss[0][1] == "X" or listss[1][0] == "X"):
+                listss[0][0] = "O"
+                valid = 1
+            elif valid == 0 and listss[0][2] == " " and (listss[0][1] == "X" or listss[1][2] == "X"):
+                listss[0][2] = "O"
+                valid = 1
+            elif valid == 0 and listss[2][0] == " " and (listss[2][1] == "X" or listss[1][0] == "X"):
+                listss[2][0] = "O"
+                valid = 1
+            elif valid == 0 and listss[2][2] == " " and (listss[2][1] == "X" or listss[1][2] == "X"):
+                listss[2][2] = "O"
+                valid = 1
+            elif valid == 0 and listss[0][0] == " ":
+                listss[0][0] = "O"
+                valid = 1
+            elif valid == 0 and listss[0][2] == " ":
+                listss[0][2] = "O"
+                valid = 1
+            elif valid == 0 and listss[2][0] == " ":
+                listss[2][0] = "O"
+                valid = 1
+            elif valid == 0 and listss[2][2] == " ":
+                listss[2][2] = "O"
+                valid = 1
     valid = 0
     a, b, c = 0, 0, 0
     d, e, f = 0, 1, 2
@@ -114,7 +281,8 @@ while init > 0:
 
         while i > 3:
             i -= 1
-            if listss[a][d] == listss[b][e] == listss[c][f] == ("X" or "O"):
+            if listss[a][d] == listss[b][e] == listss[c][f] == "X" or\
+                    listss[a][d] == listss[b][e] == listss[c][f] == "O":
                 print("Parabéns jogador {}{}{} você VENCEU!!!".format(listss[a][d], listss[b][e], listss[c][f]))
                 init = 1
                 draw = 1
@@ -124,18 +292,19 @@ while init > 0:
         while i > 0:
             a, b, c = 0, 1, 2
             i -= 1
-            if listss[a][d] == listss[b][e] == listss[c][f] == ("X" or "O"):
+            if listss[a][d] == listss[b][e] == listss[c][f] == "X" or\
+                    listss[a][d] == listss[b][e] == listss[c][f] == "O":
                 print("Parabéns jogador {}{}{} você VENCEU!!!".format(listss[a][d], listss[b][e], listss[c][f]))
                 init = 1
                 draw = 1
             d, e, f = d + 1, e + 1, f + 1
 
-    if listss[0][0] == listss[1][1] == listss[2][2] == ("X" or "O"):
+    if listss[0][0] == listss[1][1] == listss[2][2] == "X" or listss[0][0] == listss[1][1] == listss[2][2] == "O":
         print("Parabéns jogador {}{}{} você VENCEU!!!".format(listss[0][0], listss[1][1], listss[2][2]))
         init = 1
         draw = 1
 
-    if listss[2][0] == listss[1][1] == listss[0][2] == ("X" or "O"):
+    if listss[2][0] == listss[1][1] == listss[0][2] == "X" or listss[2][0] == listss[1][1] == listss[0][2] == "O":
         print("Parabéns jogador {}{}{} você VENCEU!!!".format(listss[2][0], listss[1][1], listss[0][2]))
         init = 1
         draw = 1
