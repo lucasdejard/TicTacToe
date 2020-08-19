@@ -5,3 +5,9 @@ while>c& :
 	else: return2
                
                apenas a classe para salvar
+nome():
+A1="'",
+'"'
+W i>A1.COUNT:
+	if nome.COUNT(A1i) ==T:
+		return(true)
